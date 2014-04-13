@@ -13,13 +13,15 @@
 namespace numerics
 {
 
-	/// Parses a null-terminated string of an integral value in base 10.
-	///
-	/// @param str the string to parse
-	/// @param holder a pointer of where the parsed value should be placed
-	/// @param integral_t the data type
-	///
-	/// @return if parsing was successful
+	/**
+     * Parses a null-terminated string of an integral value in base 10.
+	 *
+	 * @param str the string to parse
+	 * @param holder a pointer of where the parsed value should be placed
+	 * @param integral_t the data type
+	 * 
+	 * @return if parsing was successful
+     */
 	template <class intregral_t>
 	bool parse_integral(const char* const str, intregral_t* const holder)
 	{
@@ -79,16 +81,18 @@ namespace numerics
 		return false;
 	}
 
-	/// Parses a null-terminated string of an integral value in the specified base.
-	/// Possible valid chars include numbers 0-9, and values greater than 'A' for bases
-	/// greater than 10.
-	///
-	/// @param str the string to parse
-	/// @param holder a pointer of where the parsed value should be placed
-	/// @param base the base to parse in
-	/// @param integral_t the data type
-	///
-	/// @return if parsing was successful
+	/** 
+     * Parses a null-terminated string of an integral value in the specified base.
+	 * Possible valid chars include numbers 0-9, and values greater than 'A' for bases
+	 * greater than 10.
+	 *
+	 * @param str the string to parse
+	 * @param holder a pointer of where the parsed value should be placed
+	 * @param base the base to parse in
+	 * @param integral_t the data type
+	 *
+	 * @return if parsing was successful
+     */
 	template <class intregral_t>
 	bool parse_integral(const char* const str, intregral_t* const holder, const unsigned int base)
 	{
@@ -159,15 +163,17 @@ namespace numerics
 		return false;
 	}
 
-	/// Parses a null-terminated string of an integral value in base 16.
-	/// Valid values include 0-9, A-F and a-f. The string must be in the form
-    /// [+/-]0x[xx...].
-	///
-	/// @param str the string to parse
-	/// @param holder a pointer of where the parsed value should be placed
-	/// @param integral_t the data type
-	///
-	/// @return if parsing was successful
+	/**
+     * Parses a null-terminated string of an integral value in base 16.
+	 * Valid values include 0-9, A-F and a-f. The string must be in the form
+     * [+/-]0x[xx...].
+	 *
+	 * @param str the string to parse
+	 * @param holder a pointer of where the parsed value should be placed
+	 * @param integral_t the data type
+	 *
+	 * @return if parsing was successful
+     */
 	template <class intregral_t>
 	bool parse_hex(const char* const str, intregral_t* const holder)
 	{
@@ -245,14 +251,16 @@ namespace numerics
 		return false;
 	}
 
-	/// Parses a null-terminated string of an integral value in binary.
-	/// Valid values include 0 and 1. The string must be in the form [+/-]0b[xx...].
-	///
-	/// @param str the string to parse
-	/// @param holder a pointer of where the parsed value should be placed
-	/// @param integral_t the data type
-	///
-	/// @return if parsing was successful
+	/**
+     * Parses a null-terminated string of an integral value in binary.
+	 * Valid values include 0 and 1. The string must be in the form [+/-]0b[xx...].
+	 *
+	 * @param str the string to parse
+	 * @param holder a pointer of where the parsed value should be placed
+	 * @param integral_t the data type
+	 *
+	 * @return if parsing was successful
+     */
 	template <class intregral_t>
 	bool parse_bin(const char* const str, intregral_t* const holder)
 	{
@@ -301,15 +309,17 @@ namespace numerics
 		return false;
 	}
 
-	/// Parses a null-terminated string of a decimal or exponent notation to a
-    /// floating point (or optionally integral) value.
-	/// The string must be in the form [+/-]xx...[.][xx...][e/E][(exponent)].
-	///
-	/// @param str the string to parse
-	/// @param holder a pointer of where the parsed value should be placed
-	/// @param fp_t the data type
-	///
-	/// @return if parsing was successful
+	/**
+     * Parses a null-terminated string of a decimal or exponent notation to a
+     * floating point (or optionally integral) value.
+	 * The string must be in the form [+/-]xx...[.][xx...][e/E][(exponent)].
+	 *
+	 * @param str the string to parse
+	 * @param holder a pointer of where the parsed value should be placed
+	 * @param fp_t the data type
+	 *
+	 * @return if parsing was successful
+     */
 	template <class fp_t>
 	bool parse_fp(const char* const str, fp_t* const holder)
 	{
