@@ -5,8 +5,8 @@
  *      Author: Pranjal Raihan
  */
 
-#ifndef NUMBER_UTILS_PARSE_HPP_
-#define NUMBER_UTILS_PARSE_HPP_
+#ifndef __number_utils_parse_hpp__
+#define __number_utils_parse_hpp__
 
 #include <cmath>
 
@@ -49,7 +49,7 @@ bool parse_integral(const char* const str, intregral_t* const holder)
         if (!c)
         {
             // if the number is empty, like "", "+" or "-" return false
-            if (i == i_inc ? 1 : 0)
+            if (i == (i_inc ? 1 : 0))
             {
                 return false;
             }
@@ -204,7 +204,7 @@ bool parse_hex(const char* const str, intregral_t* const holder)
         char c = str[i + 2];
         if (!c)
         {
-            if (i == i_inc ? 1 : 0)
+            if (i == (i_inc ? 1 : 0))
             {
                 // if the number is empty, like "", "+" or "-" return false
                 return false;
@@ -288,7 +288,7 @@ bool parse_bin(const char* const str, intregral_t* const holder)
         char c = str[i + 2];
         if (!c)
         {
-            if (i == i_inc ? 1 : 0)
+            if (i == (i_inc ? 1 : 0))
             {
                 return false;
             }
@@ -347,7 +347,7 @@ bool parse_fp(const char* const str, fp_t* const holder)
         char c = str[i];
         if (!c)
         {
-            if (exp_inc || i == i_inc ? 1 : 0)
+            if (exp_inc || (i == (i_inc ? 1 : 0)))
             {
                 return false;
             }
@@ -413,4 +413,4 @@ bool parse_fp(const char* const str, fp_t* const holder)
 
 }
 
-#endif /* NUMBER_UTILS_PARSE_HPP_ */
+#endif /* __number_utils_parse_hpp__ */
